@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Tech Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #fff;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1{
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-decoration-color: transparent;
+                }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .h22{
+            background-color: #ff8177;
+            background-image: linear-gradient(to top,
+            #ff0844 0%,
+            #ffb199 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-decoration-color: transparent;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .description p{
+            font-size: 1.5rem;
+            background-color: #ff8177;
+            background-image: linear-gradient(to top,
+            #b721ff 0%,
+            #21d4fd 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-decoration-color: transparent;
+            text-align: center;
+            font-weight: 600
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            transition: color 0.3s;
+            font-weight: 900;
+        }
+
+        nav a:hover {
+            color: #dc2424;
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            color: rgb(177, 172, 172);
+            margin-right: 5px;
+        }
+        .cart-icon:hover{
+            color: #dc2424;
+        }
+
+        section {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #141414;
+            padding: 20px;
+            border-radius: 8px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+
+         .product:hover {
+          background-color: #a6a880;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+        .buy-btn {
+            background-color: #f77062;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #f77062;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 14px;
+        }
+        /* footer */
+
+.footer__container {
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+  
+}
+
+#footer__logo {
+    color: #fff;  
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    gap: 10px;
+    display: flex;
+
+}
+.footer__link--items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px;
+    height: auto;
+    width: 160px;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+    color: #fff; /* Move color to this selector for consistency */
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-out; /* Move transition here for consistency */
+}
+
+.footer__link--items a:hover {
+    color: #e9e9e9;
+}
+ </style>
+
+
+</head>
+<body>
+
+    <header>
+        <h1>NEXT Tech Products</h1>
+    </header>
+
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart cart-icon"></i> Cart
+            </a>
+        </div>
+    </nav>
+
+    <div class="description">
+        <h2 class="h22">Welcome to NEXT Tech Products</h2>
+        <p>Explore our latest and greatest tech products.</p>
+    </div>
+
+    <section>
+        <div class="product" id="Haptic gloves">
+            <img src="product 1.jpg" alt="">
+            <h3>Haptic gloves</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Haptic gloves')">Buy</button>
+        </div>
+
+        <div class="product" id="Next Gen Monitors">
+            <img src="product 2.jpg" alt="Product 2">
+            <h3>Next Gen Monitors </h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Next Gen Monitors')">Buy</button>
+        </div>
+
+        <!-- Example of product 3 -->
+        <div class="product" id="product3">
+            <img src="product 3.avif" alt="Product 3">
+            <h3>Advanced AI watch</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Advanced AI watch')">Buy</button>
+        </div>
+
+        <!-- Example of product 4 -->
+        <div class="product" id="product4">
+            <img src="product 4.jpg" alt="Product 4">
+            <h3>Futuristic watch</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Futuristic watch')">Buy</button>
+        </div>
+
+        <div class="product" id="product4">
+            <img src="product 4.jpg" alt="Product 4">
+            <h3>Futuristic watch</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Futuristic watch')">Buy</button>
+        </div>
+
+        <div class="product" id="product4">
+            <img src="product 4.jpg" alt="Product 4">
+            <h3>Futuristic watch</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Futuristic watch')">Buy</button>
+        </div>
+
+        <!-- Example of product 5 -->
+        <div class="product" id="product5">
+            <img src="./product 5.jpg" alt="Product 5">
+            <h3>VR glasses</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Product 5')">Buy</button>
+        </div>
+
+        <!-- Example of product 6 -->
+        <div class="product" id="product6">
+            <img src="./product 6.jpg" alt="Product 6">
+            <h3>Futuristic robots</h3>
+            <p>Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Ipsam rem, sequi quis porro quos esse expedita
+                 quam!</p>
+                 <p>Price: $29.99</p>
+            <button class="buy-btn" onclick="addToCart('Product 6')">Buy</button>
+        </div>
+
+    </section>
+    <div class="footer1">
+        <div class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                    <div class="footer__link--items">
+                        <h2>About Us</h2>
+                        <a href="/">How it works</a>
+                        <a href="/">Testimonals</a>
+                        <a href="/">Careers</a>
+                        <a href="/">Investements</a>
+                        <a href="/">Terms of Service</a>
+                    </div>
+                    <div class="footer__link--items">
+                        <h2>Contact Us</h2>
+                        <a href="/">Contact</a>
+                        <a href="/">Support</a>
+                        <a href="/">Destinations</a>
+                        <a href="/">Sponsorships</a>
+                    </div>
+                    <div class="footer__link--items">
+                        <h2>Videos</h2>
+                        <a href="/">Submit Video</a>
+                        <a href="/">Ambassadors</a>
+                        <a href="/">Careers</a>
+                        <a href="/">Agency</a>
+                        <a href="/">Influencer</a>
+                    </div>
+                    <div class="footer__link--items">
+                        <h2>Social Media</h2>
+                        <a href="/">How it works</a>
+                        <a href="/">Testimonials</a>
+                        <a href="/">Careers</a>
+                        <a href="/">Investements</a>
+                        <a href="/">Terms of Service</a>
+                    </div>
+            </div>
+        </div>  
+    </div> 
+    </div>
+        
+    
+    <footer>
+        &copy; 2024 NEXT Tech Products. All rights reserved.
+    </footer>
+
+    <div class="cart-indicator" id="cartIndicator"></div>
+  
+    
+    <script> cartCount = 0;
+    let cartDetails = [];
+    
+    function addToCart(productName) {
+        cartCount++;
+        updateCartIndicator();
+    
+        cartDetails.push({
+            name: productName,
+            price: getProductPrice(productName),
+        });
+    
+        updateCartPage();
+    }
+    
+    function updateCartIndicator() {
+        const cartIndicator = document.getElementById('cartIndicator');
+        cartIndicator.textContent = cartCount;
+    }
+    
+    function updateCartPage() {
+        const cartPage = document.getElementById('cartPage');
+        cartPage.innerHTML = ''; 
+    
+        cartDetails.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
+            productElement.innerHTML = `
+                <h3>${product.name}</h3>
+                <p>Price: $${product.price}</p>
+            `;
+            cartPage.appendChild(productElement);
+        });
+    
+        const checkoutBtn = document.createElement('button');
+        checkoutBtn.classList.add('checkout-btn');
+        checkoutBtn.textContent = 'Proceed to Checkout';
+        checkoutBtn.onclick = checkout;
+        cartPage.appendChild(checkoutBtn);
+    }
+    
+    function checkout() {
+        alert('Redirecting to checkout page...');
+    }
+    
+    function showCart() {
+        updateCartPage();
+        const cartPage = document.getElementById('cartPage');
+        cartPage.style.display = 'block';
+    }
+    
+    function getProductPrice(productName) {
+        return productName === 'Product 1' ? 19.99 : 29.99;
+    }
+    </script>
+</body>
+</html>

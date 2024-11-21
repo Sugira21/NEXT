@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Redirect</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login Successful!</h1>
+    
+    <p>Welcome! You have been redirected after logging in.</p>
+
+    <script>
+        // Simulate a redirect after 3 seconds
+        setTimeout(function() {
+            window.location.href = "index.html"; // Replace with the actual page you want to redirect to
+        }, 3000);
+    </script>
+
+</body>
+</html>
